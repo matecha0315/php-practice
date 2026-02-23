@@ -22,16 +22,12 @@ date('i') . '分' .
 date('s') . '秒です。';
 
 // Q4 条件分岐-1 if文
-$device = 'ぬ';
+$device = 'み';
 
-if ($device === 'windows') {
-	echo '使用OSは、windowsです。';
+if ($device === 'windows' || $device === 'mac') {
+	echo '使用OSは' . $device . 'です。';
 } else {
-	if ($device === 'mac') {
-		echo '使用OSは、macです。';
-	} else {
-		echo 'どちらでもありません。';
-	}
+    echo 'どちらでもありません。';
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -54,14 +50,9 @@ $prefecturalcapital = [
   '群馬県' => '前橋市',
   '茨城県' => '水戸市'
 ];
-	
-echo $prefecturalcapital['東京都'] . "\n" . 
-	 $prefecturalcapital['神奈川県'] . "\n" . 
-	 $prefecturalcapital['千葉県'] . "\n" . 
-	 $prefecturalcapital['埼玉県'] . "\n" . 
-	 $prefecturalcapital['栃木県'] . "\n" . 
-	 $prefecturalcapital['群馬県'] . "\n" . 
-	 $prefecturalcapital['茨城県'];
+
+foreach ($prefecturalcapital as $prefecture => $capital)
+	echo $prefecturalcapital[$prefecture] . "\n";
 
 // Q8 連想配列-2
 $prefecturalcapital = [

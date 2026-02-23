@@ -140,10 +140,14 @@ $Yamadasan->attend('PHP');
 
 // Q5 定義済みクラス
 // 問題1
+// $date = new DateTime();
+
+// $date->modify('-1 month');
+// echo $date->format('Y-m-d');
+//↑見比べ用（メモ）
 $date = new DateTime();
 
-$date->modify('-1 month');
-echo $date->format('Y-m-d');
+echo $date->modify('-1 month')->format('Y-m-d');
 
 // 問題2
 $start = new DateTime("1992-04-25");
